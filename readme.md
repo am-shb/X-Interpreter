@@ -36,3 +36,17 @@ LABEL [label_name]                              - Set a label at current line
 IFGO [var], [var], [label]                      - Goto label if var1 != var2
 
 EXIT                                            - Exit interpreter
+
+## Sample code
+The follwing code gets a number from standard input and prints factorial of the given number
+```
+INT N, I, FACT
+READ N
+ASSIGN FACT, 1
+ASSIGN I, 1
+LABEL START
+ADD I, I, 1
+MULT FACT, FACT, I
+IFGO I, N, START
+PRINT FACT
+```
